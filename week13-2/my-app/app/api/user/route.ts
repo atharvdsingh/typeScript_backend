@@ -1,9 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 import { log } from "console";
 import { NextRequest, NextResponse } from "next/server";
-
-const prisma = new PrismaClient();
-
+import prisma from "@/db";
 export async function GET() {
   return NextResponse.json({
     user: "dsingh9450492600@gmail.com",

@@ -1,11 +1,24 @@
 "use client"
 import axios from "axios";
 import { ChangeEventHandler, FormEvent, FormEventHandler, InputHTMLAttributes, useState } from "react";
+import prisma from "@/db";
 
 export default function(){
 const [email, setEmail] = useState<string>("")
 const [password, setPassword] = useState<string>("")
     
+
+
+// async function fetchApi(e:FormEvent<HTMLFormElement>){
+//     e.preventDefault()
+//     console.log(email,password)
+//     const res=await axios.post("http://localhost:3000/api/user",{
+//         email,password
+//     })
+//  console.log(res.data)
+
+// }
+
 
 
 async function fetchApi(e:FormEvent<HTMLFormElement>){
@@ -17,7 +30,6 @@ async function fetchApi(e:FormEvent<HTMLFormElement>){
  console.log(res.data)
 
 }
-
 
 
     return (
